@@ -1,22 +1,27 @@
+<script setup>
+
+defineProps({
+  product: {
+    type: Object,
+    default: () => ({ name: 'Producto no disponible', description: 'plato de comida', price: '$2.000' })
+  }
+});
+</script>
+
 <template>
   <!-- cartas -->
-  <section class="container p-4" id="productos">
-    <h1 class=" text-center">Nuestros Productos</h1>
+  <section class=" p-4" id="productos">
+    <h1 class="text-center">Detalles del Producto</h1>
     <div class="row">
-      <!-- primera -->
       <div class="col-sm-4 col-12 px-5 mb-4">
-
         <div class="card">
-          <img src="/colaciones.jpg" class="card-img-top" alt="colaciones" />
+          <img src="/colaciones.jpg" class="card-img-top" alt="Imagen del producto" />
           <div class="card-body">
-            <h5 class="card-title fw-bold">Colaciones</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
+            <h5 class="card-title fw-bold">{{ product.name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Precio 2.000</li>
+            <li class="list-group-item">{{ product.price }}</li>
             <li class="list-group-item">Vestibulum at eros</li>
           </ul>
           <div class="card-body">

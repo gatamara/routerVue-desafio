@@ -12,7 +12,7 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/productos/:id', //pasando el id de la card
+      path: '/productos/:id?', //pasando la props id de la card
       name: 'productos',
       component: PorductView,
       props: true,

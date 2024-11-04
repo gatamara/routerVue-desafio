@@ -1,12 +1,21 @@
 <script setup>
 import CardProduct from '@/components/CardProduct.vue';
 import LinkReturn from '@/components/LinkReturn.vue';
+
+const props = defineProps(['id']);
+
+const products = {
+  1: { name: 'Producto 1', description: 'Descripción del producto 1', price: '$10' },
+};
+
+const productData = products[props.id] || { name: 'Que delichus', description: 'plato de comidita', price: '$2.000' };
+
 </script>
 
 <template>
   <div class="container">
     <LinkReturn />
-    <CardProduct />
+    <CardProduct :product="productData" />
   </div>
 
 </template>
