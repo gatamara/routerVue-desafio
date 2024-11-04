@@ -10,7 +10,7 @@ defineProps({
 
 <template>
   <!-- cartas -->
-  <section class=" p-4" id="productos">
+  <section class="container p-4" id="productos">
     <h1 class="text-center">Detalles del Producto</h1>
     <div class="row">
       <div class="col-sm-4 col-12 px-5 mb-4">

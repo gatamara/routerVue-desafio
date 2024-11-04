@@ -13,14 +13,14 @@ const productData = products[props.id] || { name: 'Que delichus', description: '
 </script>
 
 <template>
-  <div class="container">
+  <div class="container-custom">
     <LinkReturn />
     <CardProduct :product="productData" />
   </div>
 
 </template>
 <style scoped>
-.container {
+.container-custom {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
